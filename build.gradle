@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+}
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/net.sf.trove4j/trove4j
+    compile group: 'net.sf.trove4j', name: 'trove4j', version: '3.0.3'
+
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+javafx {
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.base' ]
+}
